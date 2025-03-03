@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group mb-3">
+            <label class="form-label">Nome Completo:</label>
+            {{ form.nome }}
+            {{ form.nome.errors }}
+        </div>
+        
+        <div class="form-group mb-3">
+            <label class="form-label">CNPJ:</label>
+            {{ form.cnpj }}
+            <small class="form-text text-muted">Digite apenas números.</small>
+            {{ form.cnpj.errors }}
+        </div>
+        
+        <div class="form-group mb-3">
+            <label class="form-label">Telefone:</label>
+            {{ form.telefone }}
+            <small class="form-text text-muted">Digite apenas números.</small>
+            {{ form.telefone.errors }}
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="form-group mb-3">
+            <label class="form-label">E-mail:</label>
+            {{ form.email }}
+            {{ form.email.errors }}
+        </div>
+        
+        <div class="form-group mb-3">
+            <label class="form-label">Endereço:</label>
+            {{ form.endereco }}
+            {{ form.endereco.errors }}
+        </div>
+    </div>
+</div>

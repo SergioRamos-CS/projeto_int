@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+{% endif %}
+<h2><i class="fa-solid fa-user"></i> Clientes</h2>
+<a href="{% url 'home' %}" class="btn btn-secondary mb-3"><i class="fa-solid fa-left-long"></i> Voltar</a>
+<a href="{% url 'add_cliente' %}" class="btn btn-success mb-3"><i class="fa-solid fa-plus"></i> Novo Cliente</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>CNPJ</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Cadastro</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.cnpj }}</td>
+            <td>{{ cliente.telefone }}</td>
+            <td>{{ cliente.email }}</td>
+            <td>{{ cliente.data_cadastro }}</td>             
+            <td style="display: flex;">                
+                <a href="{% url 'edit_cliente' cliente.id_cliente %}" class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                <form method="post" action="{% url 'delete_cliente' cliente.id_cliente %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

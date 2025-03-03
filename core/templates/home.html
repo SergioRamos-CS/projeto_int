@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">Bem-vindo, {{ user.username }}</h1>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a href="{% url 'clientes' %}" class="btn btn-primary btn-lg"><i class="fa-solid fa-user"></i> Clientes</a>
+        <a href="{% url 'obras' %}" class="btn btn-primary btn-lg"><i class="fa-solid fa-screwdriver-wrench"></i> Obras</a>
+        <a href="{% url 'logout' %}" class="btn btn-danger btn-lg"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+    </div>
+</div>
+{% endblock %}

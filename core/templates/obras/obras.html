@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2><i class="fa-solid fa-screwdriver-wrench"></i> Obras</h2>
+<a href="{% url 'home' %}" class="btn btn-secondary mb-3"><i class="fa-solid fa-left-long"></i> Voltar</a>
+<a href="{% url 'add_obra' %}" class="btn btn-success mb-3"><i class="fa-solid fa-plus"></i> Nova Obra</a>
+
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+{% endif %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Número</th>            
+            <th>Cliente</th>
+            <th>Obra</th>
+            <th>Endereço</th>
+            <th>Início</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for obra in obras %}
+        <tr>
+            <td>{{ obra.id_obra }}</td>
+            <td>{{ obra.cliente.nome }}</td>            
+            <td>{{ obra.descricao }}</td>
+            <td>{{ obra.endereco_obra }}</td>
+            <td>{{ obra.data_inicio }}</td>
+            <td style="display: flex;">
+                <a href="{% url 'edit_obra' obra.id_obra %}" class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                <form method="post" action="{% url 'delete_obra' obra.id_obra %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash-can"></i></button>
+                </form>
+            </td>            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

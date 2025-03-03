@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group mb-3">
+            <label class="form-label">Cliente:</label>
+            {{ form.cliente }}
+            {{ form.cliente.errors }}
+        </div>
+        
+        <div class="form-group mb-3">
+            <label class="form-label">Endereço da Obra:</label>
+            {{ form.endereco_obra }}
+            {{ form.endereco_obra.errors }}
+        </div>
+        
+        <div class="form-group mb-3">
+            <label class="form-label">Cidade:</label>
+            {{ form.cidade }}
+            {{ form.cidade.errors }}
+        </div>
+        
+        <div class="form-group mb-3">
+            <label class="form-label">Descrição:</label>
+            {{ form.descricao }}
+            {{ form.descricao.errors }}
+        </div>        
+    </div>
+    
+    <div class="col-md-6">
+        <div class="form-group mb-3">
+            <label class="form-label">Data de Início:</label>
+            {{ form.data_inicio }}
+            {{ form.data_inicio.errors }}
+        </div>
+        
+        <div class="form-group mb-3">
+            <label class="form-label">Data de Conclusão:</label>
+            {{ form.data_conclusao }}
+            {{ form.data_conclusao.errors }}
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="form-label">Duração prevista:</label>
+            {{ form.tempo_obra }}
+            {{ form.tempo_obra.errors }}
+        </div>
+        
+        <div class="form-group mb-3">
+            <label class="form-label">Valor Total (R$):</label>
+            {{ form.valor_obra }}
+            {{ form.valor_obra.errors }}
+        </div>
+
+    </div>
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+    <div class="form-group mb-3">
+        <label class="form-label">Parcelado:</label>
+        <div class="form-check">
+            {{ form.status_parcelado }}
+        </div>
+        {{ form.status_parcelado.errors }}
+    </div>
+    </div>
+</div>

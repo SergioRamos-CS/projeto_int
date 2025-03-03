@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="alert alert-danger">
+    <h4>Confirmar Exclusão</h4>
+    <p>Tem certeza que deseja excluir permanentemente {{ object }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+        <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}
