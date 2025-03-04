@@ -3,13 +3,13 @@ PROJETO INTEGRADOR - W&F Engenharia
 Grupo: DRP02-PJI110-A2025S1-T001 
 
 Integrantes: 
-  Andrey Machado Rosa, RA23202463 
-  Barbara Fernandes de Moura, RA2212877 
-  José Nelde Sousa Neres, RA23212428 
-  Luiz Fernando Spinelli, RA23220424 
-  Nathalia Rodrigues Marin, RA23202927 
-  Paulo de Souza, RA2203929 
-  Robson Ribeiro da Silva, RA2206152 
+  Andrey Machado Rosa, RA23202463
+  Barbara Fernandes de Moura, RA2212877
+  José Nelde Sousa Neres, RA23212428
+  Luiz Fernando Spinelli, RA23220424
+  Nathalia Rodrigues Marin, RA23202927
+  Paulo de Souza, RA2203929
+  Robson Ribeiro da Silva, RA2206152
   Sérgio Roberto Ramos, RA23202728 
 
 Disciplina: Projeto Integrador 
