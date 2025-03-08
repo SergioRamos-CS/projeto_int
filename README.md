@@ -36,5 +36,5 @@ TECNOLOGIAS UTILIZADAS
   Controle de Versão: Git (utilizando GitHub para versionamento e colaboração) 
 
 PRÉ REQUISITOS 
-  Ter o python e django instalado na sua máquina. 
+  Ter o python e django instalado. 
   Ter o Git para controle de versão.
